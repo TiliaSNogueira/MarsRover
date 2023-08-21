@@ -1,5 +1,6 @@
 package br.com.marsrover.di
 
+import br.com.marsrover.service.MarsRoverPhotoService
 import br.com.marsrover.service.MarsRoverService
 import dagger.Module
 import dagger.Provides
@@ -13,5 +14,9 @@ object AppModule {
     @Provides
     fun provideMarRoverService(): MarsRoverService =
         MarsRoverService.create()
+
+    @Provides
+    fun provideMarsRoverPhotosService(): MarsRoverPhotoService =
+        MarsRoverPhotoService.create()
 
 }
